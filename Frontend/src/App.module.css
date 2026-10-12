@@ -1,0 +1,71 @@
+.appShell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-bg-alt);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-6);
+  background: var(--color-bg-alt);
+  color: var(--color-text-strong);
+  box-shadow: var(--shadow-header);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.headerRight {
+  margin-left: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: var(--spacing-1) 0 0 0;
+  opacity: 0.9;
+  font-size: var(--font-size-md);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.palette {
+  width: 200px;
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: var(--spacing-4);
+  overflow: auto;
+}
+
+.canvasWrapper {
+  flex: 1;
+  overflow: hidden;
+  /* padding: var(--spacing-4); */
+}
+
+.canvasWrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-canvas-bg);
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+}
+

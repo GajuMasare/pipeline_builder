@@ -1,0 +1,172 @@
+.nodeShell {
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-node-bg);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--node-accent, var(--color-node-border));
+  min-width: 170px;
+  box-shadow: var(--shadow-node);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+  color: var(--color-text);
+}
+
+.nodeShell:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  /* border: 3px solid var(--node-accent, var(--color-node-border));; */
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Grid layout keeps every field's input box aligned to the same width,
+   regardless of label text length */
+.fieldRow {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.fieldLabelColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--color-text);
+}
+
+/* Legacy min-width label classes kept for backward compat with existing
+   node files, but fieldRow (grid) is the preferred pattern going forward */
+.fieldLabelText {
+  min-width: 36px;
+  color: var(--color-text);
+}
+
+.fieldLabelTextMedium {
+  min-width: 46px;
+}
+
+.fieldLabelTextWide {
+  min-width: 50px;
+}
+
+.fieldLabelTextXL {
+  min-width: 55px;
+}
+
+.fieldControl {
+  box-sizing: border-box;
+  width: 100%;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-node-bg);
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 1;
+}
+
+select.fieldControl {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 22px;
+}
+
+.fieldControl:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+.fieldTextarea {
+  width: 100%;
+  height: auto;
+  min-height: 26px;
+  resize: none;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  overflow: hidden;
+  max-height: none;
+}
+
+.fieldDescription {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+
+.fieldHelper {
+  font-size: 10px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.handle {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid var(--color-bg-alt);
+  box-shadow: var(--shadow-handle);
+  transition: width var(--transition-fast), height var(--transition-fast);
+}
+
+.handle:hover {
+  width: 12px;
+  height: 12px;
+}
+
+.handleTarget {
+  background: var(--color-danger);
+}
+
+.handleSource {
+  background: var(--color-success);
+}
+
+.variantApi { --node-accent: var(--accent-api); }
+.variantCalculator { --node-accent: var(--accent-calculator); }
+.variantConditional { --node-accent: var(--accent-conditional); }
+.variantDatabase { --node-accent: var(--accent-database); }
+.variantInput { --node-accent: var(--accent-input); }
+.variantLlm { --node-accent: var(--accent-llm); }
+.variantLoop { --node-accent: var(--accent-loop); }
+.variantOutput { --node-accent: var(--accent-output); }
+.variantText { --node-accent: var(--accent-text); }

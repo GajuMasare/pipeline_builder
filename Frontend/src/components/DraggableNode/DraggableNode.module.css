@@ -1,0 +1,32 @@
+.draggable {
+  cursor: grab;
+  min-width: 90px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-node-bg);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--node-accent, var(--color-node-border));
+  justify-content: flex-start;
+  gap: 8px;
+  color: var(--color-text);
+  box-shadow: var(--shadow-node);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.draggable:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.label {
+  color: var(--color-text-strong);
+  font-weight: 600;
+  font-size: 13px;
+}
