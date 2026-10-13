@@ -9,7 +9,6 @@ function App() {
       <header className={styles.header}>
         <div className={styles.headerLeft}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-             <img src={`${process.env.PUBLIC_URL}/vectorshiftLogo.png`} alt="VectorShift logo" className={styles.logo}/>
             <h1 className={styles.title}>Pipeline Builder</h1>
           </div>
         </div>
