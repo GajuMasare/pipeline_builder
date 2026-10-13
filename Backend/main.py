@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from collections import defaultdict, deque
 
 app = FastAPI()
@@ -25,7 +25,7 @@ class Edge(BaseModel):
     source: str
     target: str
     id: str
-    type: str = None
+    type: Optional[str] = None
 
 class Pipeline(BaseModel):
     nodes: List[Node]
